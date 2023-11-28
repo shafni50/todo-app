@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-color: #8BC6EC;
+    height: auto;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+}
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    text-transform: lowercase;
+    margin: 2rem;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+a:hover {
+    border-bottom: none;
+}
+form {
+    margin: 4px;
+    display: flex;
+    max-width: 100%;
+}
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    background: #FFFF;
+    outline: none;
+    border-radius: 10px;
+}
+form input {
+    max-width: 100%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+form input:focus {
+    outline: 1px solid #000;
+}
+form button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+}
+form button:hover {
+    background: #000;
+    color: #ffff; 
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.list {
+    width: inherit !important;
+    max-width: 100%;
+}
+.todo {
+    border-radius: 10px;
+    margin: 0.5rem;
+    background: #000;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+.todo-item {
+    margin: 4px 2rem;
+}
+.delete-btn, .complete-btn {
+    padding: 0.7rem;
+    border: none;
+    margin-left: 1px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+.delete-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+.delete-btn:hover {
+    background: #ffffffe7;
+}
+.complete-btn:hover {
+    background: #ffffffe7;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: .8;
+    color: #8BC6EC;
+}
+.fall {
+    transition: .6s;
+    transform: translateY(8rem) rotateZ(15deg);
+    opacity: 0;
+}
+select {
+     appearance: none;
+     outline: none;
+     border: none;
+     border-radius: 10px;
+     color: #000;
+     background: #fff;
+     font-size: 22px;
+     padding: 0.7rem;
+     cursor: pointer;
+     width: 200px;
+     max-width: 100%;
+}
+option {
+    margin: 10px;
+    border-radius: 10px;
+}
+.select {
+    float: right;
+    align-items: center;
+    margin-left: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    content: '\25BC';
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: #000;
+    background-color: #fff;
+    padding: 0.52rem;
+    pointer-events: none;
+    transition: .1s;
+}
+.select:hover::after {
+    background-color: #000;
+    color: #fff;
+}
+
+@media(max-width: 685px) {
+    form {
+        flex-direction: column;
+    }
+    .select {
+        margin: 1rem;
+    }
+    select {
+        width: 100%;
+    }
+}
